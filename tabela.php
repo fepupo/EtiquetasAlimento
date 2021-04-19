@@ -1,9 +1,8 @@
 <?php
     session_start();
     $uid = $_SESSION["uid"];
+    include_once('./config/connection.php');
 ?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,11 +10,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Receita</title>
-
     <meta name="description" content="Sistema de geração de etiquetas nutricionais">
     <meta name="author" content="Felipe Fonseca">
+    <title>Receita</title>
+
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
@@ -26,21 +25,16 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="./css/tabelacss.css">
-    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/tabelacss.css">
+    
 
     <title>Informações</title>
 </head>
 
 <body>
-
-
-
     <?php
             //conexão com o BD
-            include_once('./config/connection.php');
-
-
+            
             //atribuindo variaveis
             $onde               = "";
             $energiaKcalT       = floatval(0);
@@ -128,7 +122,7 @@
                 $i = 0;
                 while ($registro = mysqli_fetch_array($query)) {
                     
-                    //calculando os valores para a porção converte o valor de string para float
+                    //convertendo o valor de string para float e calculando os valores diários para a porção 
                     $energiaKcal = floatval(str_replace(",", ".",$registro['energiaKcal'])) * $quantidade[$i] / 100;
                     $energiaKj = floatval(str_replace(",", ".",$registro['energiaKj'])) * $quantidade[$i] / 100;
                     $proteina = floatval(str_replace(",", ".",$registro['proteina'])) * $quantidade[$i] / 100;                    
@@ -190,7 +184,7 @@
             // fim das variaveis globais
 
                     print("<tr>");
-                        print("<td colspan='2'> TOTAIS");
+                        print("<td colspan='2'> Total por porção");
                         print("<td>".$energiaKcalT."</td>");
                         print("<td>".$energiaKJT."</td>");
                         print("<td>".$proteinaT."</td>");
@@ -202,37 +196,37 @@
                         print("<td>".$gorduraTransT."</td>");
                     print("</tr>");
                 print ("</tbody>");
-            print "</table>";
+            //print "</table>";
           
-            print("<br>");
+            //print("<br>");
 
             //print("Valores Nutricionais<br>");
 
-            print("<table>");
+            //print("<table>");
                 print("<tr>");
                     print("<th colspan='2'> TOTAIS</th>");
                     print("<th>Energia (Kcal)</th>");
                     print("<th>Energia (Kj)</th>");
                     print("<th>Proteinas</th>");
-                    print("<th> Gordura Total</th>");
-                    print("<th> Carboidratos Totais</th>");
-                    print("<th> Fibras Totais</th>");
+                    print("<th>Gordura Total</th>");
+                    print("<th>Carboidrato Total</th>");
+                    print("<th>Fibra Total</th>");
                     print("<th>Sódio Total</th>");
-                    print("<th> Gordura Saturada</th>");
-                    print("<th> Gordura Trans</th>");
+                    print("<th>Gordura Saturada</th>");
+                    print("<th>Gordura Trans</th>");
                 print("</tr>");
 
                 print("<tr>");
-                    print("<td colspan='2'> TOTAIS"."</td>");
-                    print("<td>".$energiaKcalT/ $porcao."</td>");
-                    print("<td>".$energiaKJT / $porcao."</td>");
-                    print("<td>".$proteinaT / $porcao."</td>");
-                    print("<td>".$gorduraTotalT / $porcao."</td>");
-                    print("<td>".$carboidratosT / $porcao."</td>");
-                    print("<td>".$fibraAlimentarT / $porcao."</td>");
-                    print("<td>".$sodioT / $porcao."</td>");
-                    print("<td>".$gorduraSaturadaT / $porcao."</td>");
-                    print("<td>".$gorduraTransT / $porcao."</td>");
+                    print("<td colspan='2'> % Diária"."%</td>");
+                    print("<td>".$energiaKcalT/ $porcao."%</td>");
+                    print("<td>".$energiaKJT / $porcao."%</td>");
+                    print("<td>".$proteinaT / $porcao."%</td>");
+                    print("<td>".$gorduraTotalT / $porcao."%</td>");
+                    print("<td>".$carboidratosT / $porcao."%</td>");
+                    print("<td>".$fibraAlimentarT / $porcao."%</td>");
+                    print("<td>".$sodioT / $porcao."%</td>");
+                    print("<td>".$gorduraSaturadaT / $porcao."%</td>");
+                    print("<td>".$gorduraTransT / $porcao."%</td>");
                 print("</tr>");
             print("</table>");
             
@@ -251,21 +245,19 @@
                 mysqli_query($con,$sql);
                 $i = $i + 1;
             }
-            
-
-
     ?>
-        
-    </main>
 
-    <footer class="footer">
-
-        <button class='bt2' onclick='history.go(-1);'>Voltar</button>
+    <button class='bt2' onclick='history.go(-1);'>Voltar</button>
             <div class=""> 
                 <a href="etiqueta.php">
                     <button class="bt2">Próximo</button>
                 </a>
             </div>
+        
+    </main>
+
+    <footer class="footer">
+            
     </footer>
 
     </div>

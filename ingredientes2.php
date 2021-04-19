@@ -15,7 +15,6 @@
     <meta name="author" content="Felipe Fonseca">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
@@ -29,41 +28,16 @@
 
 <body>
     <?php  
-			// Definindo ID único para o cardápio
-			$uid = md5(time() . mt_rand(1,1000000));
-			//definindo as variaveis globais
-			$_SESSION["uid"] = $uid;
-			//conexão com o banco de dados
-			include_once("./config/connection.php");
-			//$lista = $_GET['lista']; 
-		?>
-
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
-        <div class="container-fluid"><a class="navbar-brand" href="#">Company Name</a><button data-toggle="collapse"
-                data-target="#navcol-1" class="navbar-toggler"><span class="sr-only">Toggle navigation</span><span
-                    class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-                    <li class="nav-item dropdown"><a data-toggle="dropdown" aria-expanded="false"
-                            class="dropdown-toggle nav-link" href="#">Dropdown </a>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a
-                                class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third
-                                Item</a></div>
-                    </li>
-                </ul>
-                <form class="form-inline mr-auto" target="_self">
-                    <div class="form-group"><label for="search-field"><i class="fa fa-search"></i></label><input
-                            type="search" class="form-control search-field" id="search-field" name="search" /></div>
-                </form><span class="navbar-text"><a class="login" href="#">Log In</a></span><a
-                    class="btn btn-light action-button" role="button" href="#">Sign Up</a>
-            </div>
-        </div>
-    </nav>
+		// Definindo ID único para o cardápio
+		$uid = md5(time() . mt_rand(1,1000000));
+		//definindo as variaveis globais
+		$_SESSION["uid"] = $uid;
+		//conexão com o banco de dados
+		include_once("./config/connection.php");
+		//$lista = $_GET['lista']; 
+	?>
 
     <div class="container-fluid">
-
-
 
         <!-- PRINCIPAL -->
         <div class="col-sm-10">
@@ -74,31 +48,31 @@
                             <input type='number' class='form-control boxQtd' id='qntdIngrediente'
                                 name='qntdIngrediente[]' placeholder='Qntd. (g)' size='10' autocomplete='on' required />
                         </div>
-                        <div class="col-sm-8">
-                            <input type='text' class='form-control box' id='txtIngredientes' name='txtIngredientes[]'
-                                placeholder='Nome do Alimento' class='ui-autocomplete-input' required />
+                        <div class="col-sm-7">
+                            <input type='text' class='form-control box ui-autocomplete-input' id='txtIngredientes' name='txtIngredientes[]'
+                                placeholder='Nome do Alimento' required />
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
                         <button type='button' id='addCampo' class='btn btn-primary botao'> <i class="fas fa-plus"> </i>
-                            Adicionar
-                            Item</button>
+                            Adicionar Item
+                        </button>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-sm-12">
                         <div class="form-group">
                             <select name='porcao' required>
-                                <option value=''>Selecione uma porção</option> 
+                                <option value=''>Selecione uma porção</option>
                                 <?php
-										$sql = 'Select * From tblporcao';
-										$query = $con->query($sql);
-										while ($dados=$query->fetch_array()) {
-											echo "<option value=".$dados['idPorcao'].">".$dados['descricao'].'</option>';
-										}
-									?>
+									$sql = 'Select * From tblporcao';
+									$query = $con->query($sql);
+									while ($dados=$query->fetch_array()) {
+									    echo "<option value=".$dados['idPorcao'].">".$dados['descricao'].'</option>';
+									}
+								?>
                             </select>
                         </div>
                     </div>
@@ -110,13 +84,9 @@
                         </button>
                     </div>
                 </div>
-
             </form>
         </div>
-
     </div>
-
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

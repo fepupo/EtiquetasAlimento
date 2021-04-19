@@ -53,21 +53,6 @@
     ?>
 
     <div class="grid-container">
-        <header class="header">
-            <br>
-            <center>
-                <img src="./img/logoIN.png" alt="InfoNutri" width="80" height="60">
-                <img src="./img/IN.png" alt="InfoNutri" width="160" height="55">
-            </center>
-        </header>
-        <nav class="nav">
-            <div class="btn-group">
-                <br>
-                <a href="index.html">
-                    <button>Home</button>
-                </a>
-            </div>
-        </nav>
         <main class="main">
             <?php
                 session_start();
@@ -172,14 +157,16 @@
                 //print $porcDesc;
                 //"<button class='bt2' onclick='history.go(-1);'>Voltar</button>";
             ?>
-            <a href="gerar_pdf.php" >
-                <button class="bt2" >Gerar PDF</button>
+            <a href="gerar_pdf.php" target="_blank" >
+                <button type="submit" class="bt2" >Gerar PDF</button>
             </a> 
         </main>
-        <footer class="footer"></footer>
     </div>
 
     <script src="./js/ingredientes.js"></script>
+    <script>
+
+    </script>
 </body>
 
 </html>

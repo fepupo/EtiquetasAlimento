@@ -1,22 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
 }
 
 
 body {
 	background: #F0F0F0;
-
-
 }
 
-/* Remove as setas de incremento e decremento do input /*
-/* Chrome, Safari, Edge, Opera */
+/* Remove as setas de incremento e decremento do input 
+  Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
@@ -26,6 +24,7 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
 	-moz-appearance: textfield;
+	background-color: #fff;
 }
 
 .box input {
@@ -34,6 +33,7 @@ input[type=number] {
 	padding: 9px 9px;
 	border-radius: 5px;
 	transition: 0.25s;
+	background-color: #fff;
 }
 
 .boxQtd {
@@ -43,7 +43,8 @@ input[type=number] {
 	margin: 20px 0 0 0;
 	border: 2px solid #011627;
 	padding: 10px;
-	transition: 0.25s;
+	transition: 0.25s ease;
+	background-color: #fff;
 }
 
 .box {
@@ -63,10 +64,9 @@ input[type=number] {
 }
 
 .botao {
-
 	border: 0;
 	margin-top: 20px;
-	transition: 0.25s;
+	transition: 0.5s ease-in;
 }
 
 select {
@@ -75,22 +75,40 @@ select {
 	display: block;
 	margin-top: 20px;
 	border: 2px solid #011627;
-	padding: 9px 9px;
+	padding: 5px 10px;
 	outline: none;
 	color: #011627;
 	border-radius: 5px;
-	transition: 0.25s;
+	transition: 0.55s;
+}
+/* Não utilizado por enquanto 
+ Altera o botao do select */
+#appearance-select {
+	-webkit-appearance: none;
+	/* Remove estilo padrão do Chrome */
+	-moz-appearance: none;
+	/* Remove estilo padrão do FireFox */
+	appearance: none;
+	/* Remove estilo padrão do FireFox*/
+	background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #fff;
+	/* Imagem de fundo (Seta) */
+	background-position: 218px center;
+	/*Posição da imagem do background*/
+	width: 250px;
+	/* Tamanho do select, maior que o tamanho da div "div-select" */
+	height: 30px;
+	/* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+	border: 1px solid #ddd;
 }
 
-table{
+table {
 	background-color: #fffdfc;
-
 }
 
-th{
+th {
 	color: #fff;
 }
 
-.centralizado{
-    margin: 0px auto 0 auto;
+.centralizado {
+	margin: 0px auto;
 }
