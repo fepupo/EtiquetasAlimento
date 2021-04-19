@@ -1,0 +1,127 @@
+
+
+/* Remove as setas de incremento e decremento do input /*
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+body{
+	background: #dcdde1;
+}
+/* Remove as setas de incremento e decremento do input /*
+/* Firefox */
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+table,
+tr,
+td,
+th {
+	border: white solid ;
+	margin: 2px auto;
+}
+
+table {
+	border-collapse: collapse;
+	box-sizing: border-box;
+}
+
+table tr td {
+	text-align: center;
+}
+th{
+	font-weight: 600;
+}
+tr:nth-child(even) {
+	background: white;
+}
+
+tr:nth-child(odd) {
+	background: white;
+}
+.box input {
+	border: 0;
+	background: none;
+
+	margin: 20px auto;
+	border: 2px solid #011627;
+	padding: 9px 9px;
+	outline: none;
+	color: #011627;
+	border-radius: 5px;
+	transition: 0.25s;
+}
+
+.boxQtd {  
+	position: relative; 
+	border: 0;
+	background: none;
+	margin: 20px auto;
+	border: 2px solid #011627;
+	padding: 10px;
+	border-radius: 5px;
+	transition: 0.25s;
+	width: 100px;
+}
+.box { 
+	position: relative; 
+	border: 0;
+	background: none;
+	margin: 20px ;
+	margin-left: 20px;
+	border: 2px solid #011627;
+	padding: 10px;
+
+	border-radius: 5px;
+	transition: 0.25s;
+	width: fit-content;
+}
+
+.box input:hover {
+	border-color: #011627;
+}
+.botao { 
+	position: absolute; 
+	border: 0;	
+	margin: 20px auto;
+	/*border: 2px solid #011627; */
+	transition: 0.25s;
+	width: fit-content;
+}
+.bt2 {
+	border: 0;
+	background: none;
+	display: inline-block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #104439;
+	padding: 10px 35px;
+	width: 140px;
+	outline: none;
+	color: #104439;
+	border-radius: 7px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+
+.bt2:hover {
+	background: #104439;
+	color: white;
+}
+
+select{
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	border: 2px solid #011627;
+	padding: 9px 9px;
+	outline: none;
+	color: #011627;
+	border-radius: 5px;
+	transition: 0.25s;
+}
+

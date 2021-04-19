@@ -1,0 +1,58 @@
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font: 400 13.3333px Arial;
+}
+
+table,
+tr,
+td,
+th {
+	border: #011627 solid 1px;
+	margin: 5px auto;
+}
+
+table {
+	border-collapse: collapse;
+	box-sizing: border-box;
+}
+
+table tr td {
+	text-align: center;
+}
+th{
+	font-weight: 600;
+}
+tr:nth-child(even) {
+	background: #e6f0f7;
+}
+
+tr:nth-child(1) {
+	background: #011627;
+	color: white;
+}
+
+
+.bt2 {
+	border: 0;
+	background: none;
+	display: inline-block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #104439;
+	padding: 10px 35px;
+	width: 140px;
+	outline: none;
+	color: #104439;
+	border-radius: 7px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+
+.bt2:hover {
+	background: #104439;
+	color: white;
+}

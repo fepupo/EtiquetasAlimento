@@ -1,0 +1,122 @@
+body{
+	margin: 0px;
+	padding: 0;
+	font-family: arial ;
+}
+
+.barra {
+	background: #011627;
+	height: 80px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.menu {
+	float: left;
+	width: 20%;
+	height:580px;
+	background: #011627;
+	margin: 0;
+	padding: 0;
+}
+.caixa {
+	float:right;
+	background: white;
+	width: 80%;
+	height: 580px;
+	line-height: 30px;
+	color: #ddd;
+}
+.linha{
+	background: #104439;
+	height: 6px;
+	width: 100%;
+	margin: 0; 
+}
+
+.frases{
+	border: 1px solid  #29695b;
+	color: #29695b;
+}
+
+h1{
+	color: #696969;
+}
+.bt1{
+	border:0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #ff0022;
+	padding: 9px 9px;
+	width:100px;
+	outline: none;
+	color: #ff0022;
+	transition: 0.25s;
+	cursor: pointer;
+	border-radius: 7px;
+	
+}
+.bt1:hover{
+	background: #ff0022;
+	text-decoration: none;
+	color: white;
+}
+
+.bt{
+	border:0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #ff0022;
+	padding: 14px 40px;
+	width: 200px;
+	outline: none;
+	color: white;
+	transition: 0.25s;
+	cursor: pointer;
+}
+.bt:hover{
+	background: #ff0022;
+}
+
+a:link{
+	text-decoration: none;
+}
+fieldset{
+	border: white;
+}
+.box{
+	width: 800px;
+	padding: 10px;
+	position: absolute;
+	top: 60%;
+	left:61%;
+	transform: translate(-50%, -50%);
+}
+.box h6{
+	text-transform: uppercase;
+	font-weight: 100;
+	color: #104439;
+	font-style: inherit; 
+}
+.box input[type = "text"]{
+	border:0;
+	background: none;
+	display: block;
+	margin: 10px auto;
+	text-align: center;
+	border: 2px solid #104439;
+	padding: 8px 8px;
+	width: 200px;
+	outline: none;
+	color: #104439;
+	border-radius: 24px;
+	transition: 0.25s;
+} 
+.box input[type = "text"]:hover{
+	width: 200px;
+	border-color: #104439;
+}

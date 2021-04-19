@@ -1,0 +1,60 @@
+body{
+	margin: 0px;
+	padding: 0;
+	font-family: arial ;
+}
+
+.header {
+	background: #011627;
+	margin: 0;
+	padding: 0;
+}
+.nav {
+	background: #011627;
+	margin: 0;
+	padding: 0;
+}
+.main {
+	background: #dcdde1;
+	text-align: center;
+	line-height: 100px;
+	color: #ddd;
+}
+.linha{
+	background: #104439;
+	height: 6px;
+	width: 100%;
+	margin: 0; 
+}
+
+.frases{
+	border: 1px solid  #29695b;
+	color: #29695b;
+}
+
+h1{
+	color: #696969;
+}
+.bt{
+	border:0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #ff0022;
+	padding: 14px 40px;
+	width: 200px;
+	outline: none;
+	color: white;
+	transition: 0.25s;
+	cursor: pointer;
+	
+}
+.bt:hover{
+	background: #ff0022;
+	text-decoration: none;
+}
+
+a:link{
+	text-decoration: none;
+}
